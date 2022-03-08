@@ -6,16 +6,25 @@ namespace HWLesson3
     {
         static void Main(string[] args)
         {
-            int diag_arr = 0;
-            int[,] array = new int[2, 2];
-            for (int i = 0; i < array.GetLength(0); i++)
+            string[,] phoneList = {
+            {"Иван", "352-56-95"},
+            {"Сергей", "578-52-63"},
+            {"Роман", "425-54-36"},
+            {"Александр", "734-65-23"},
+            {"Виталий", "234-67-45"}
+
+            };
+
+            Console.Clear();
+            Console.WriteLine("Телефонный справочник");
+
+            for (int i = 0; i < phoneList.GetLength(0); i++)
             {
-                for (int j = 0; j < array.GetLength(1); j++)
+                for (int j = 0; j < phoneList.GetLength(1); j++)
                 {
-                    array[i, j] = diag_arr + 1;
-                    Console.WriteLine($"{new string(' ', diag_arr)}{array[i, j]}");
-                    diag_arr++;
+                    System.Console.Write($"{phoneList[i, j]} ");
                 }
+                System.Console.WriteLine();
             }
         }
     }
